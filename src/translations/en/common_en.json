@@ -1,0 +1,62 @@
+{
+    "home": {
+        "latest_transactions": "Latest Transactions"
+    },
+    "application_status": {
+        "title": "Application Status",
+        "sync_progress_label": "Sync Progress",
+        "zen_node_information": {
+            "title": "ZenNode Information"
+        },
+        "sync_status_box": {
+            "title": "Sync Status"
+        }
+    },
+    "transactions": {
+        "transaction_header": {
+            "title": "Transaction",
+            "tx_id": "Transaction id"
+        },
+        "transaction_info": {
+            "generic_properties": {
+                "title": "Generic properties",
+                "tx_id": "Transaction id",
+                "fee": "Fee",
+                "timestamp": "Timestamp",
+                "transaction_type": "Transaction type"
+            },
+            "input_boxes": {
+                "title": "Input boxes"
+            },
+            "output_boxes": {
+                "title": "Output boxes"
+            }
+        }
+    },
+    "blocks": {
+        "block_info": {
+            "header": {
+                "title": "Block #",
+                "blockhash": "BlockHash"
+            },
+            "summary": {
+                "title": "Summary",
+                "block_hash": "Block Hash",
+                "parent_block_hash": "Parent Block Hash",
+                "height": "Height",
+                "timestamp": "Timestamp",
+                "version": "Version",
+                "sidechain_transactions_merkle_root_hash": "SidechainTransactionsMerkleRootHash",
+                "ommers_merkle_root_hash": "OmmersMerkleRootHash",
+                "ommers_cumulative_score": "OmmersCumulativeScore",
+                "signature": "Signature",
+                "mainchain_headers": "MainchainHeaders"
+            },
+            "transactions": {
+                "title": "Transactions",
+                "id": "Id",
+                "type": "Type"
+            }
+        }
+    }
+}

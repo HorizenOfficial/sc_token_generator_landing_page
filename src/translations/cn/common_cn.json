@@ -1,0 +1,62 @@
+{
+    "home": {
+        "latest_transactions": "Latest Transactions CHINESE"
+    },
+    "application_status": {
+        "title": "Application Status CHINESE",
+        "sync_progress_label": "Sync Progress CHINESE",
+        "zen_node_information": {
+            "title": "ZenNode Information CHINESE"
+        },
+        "sync_status_box": {
+            "title": "Sync Status CHINESE"
+        }
+    },
+    "transactions": {
+        "transaction_header": {
+            "title": "Transaction CHINESE",
+            "tx_id": "Transaction id CHINESE"
+        },
+        "transaction_info": {
+            "generic_properties": {
+                "title": "Generic properties CHINESE",
+                "tx_id": "Transaction id CHINESE",
+                "fee": "Fee CHINESE",
+                "timestamp": "Timestamp CHINESE",
+                "transaction_type": "Transaction type CHINESE"
+            },
+            "input_boxes": {
+                "title": "Input boxes CHINESE"
+            },
+            "output_boxes": {
+                "title": "Output boxes CHINESE"
+            }
+        }
+    },
+    "blocks": {
+        "block_info": {
+            "header": {
+                "title": "Block CHINESE",
+                "blockhash": "BlockHash CHINESE"
+            },
+            "summary": {
+                "title": "Summary CHINESE",
+                "block_hash": "Block Hash CHINESE",
+                "parent_block_hash": "Parent Block Hash CHINESE",
+                "height": "Height CHINESE",
+                "timestamp": "Timestamp CHINESE",
+                "version": "Version CHINESE",
+                "sidechain_transactions_merkle_root_hash": "SidechainTransactionsMerkleRootHash CHINESE",
+                "ommers_merkle_root_hash": "OmmersMerkleRootHash CHINESE",
+                "ommers_cumulative_score": "OmmersCumulativeScore CHINESE",
+                "signature": "Signature CHINESE",
+                "mainchain_headers": "MainchainHeaders CHINESE"
+            },
+            "transactions": {
+                "title": "Transactions CHINESE",
+                "id": "Id CHINESE",
+                "type": "Type CHINESE"
+            }
+        }
+    }
+}

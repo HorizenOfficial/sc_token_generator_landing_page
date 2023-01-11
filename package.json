@@ -1,0 +1,117 @@
+{
+  "name": "sc_token_generator_frontend",
+  "version": "1.13.1",
+  "description": "Token generator for the Token side-chain",
+  "author": "Horizen - Zen Blockchain Foundation <info@horizen.io>",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HorizenOfficial/sc_token_generator_frontend"
+  },
+  "homepage": "/",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": ". ./scripts/env.sh && react-app-rewired start",
+    "build": ". ./scripts/env.sh && react-app-rewired build",
+    "start:local": "ENVIRONMENT='LOCAL' . ./scripts/env.sh && react-scripts start",
+    "build:local": "ENVIRONMENT='LOCAL' . ./scripts/env.sh && react-scripts build",
+    "test": "react-scripts test --watchAll=false --coverage",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./",
+    "lint:fix": "npm run lint --fix",
+    "husky-install": "husky install",
+    "tag": "git tag -s -m $npm_package_version $npm_package_version && git push origin $npm_package_version",
+    "tag:delete": "git tag -d $npm_package_version && git push --delete origin $npm_package_version"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.8.6",
+    "axios": "1.1.3",
+    "bignumber.js": "9.1.0",
+    "dateformat": "5.0.3",
+    "dompurify": "2.4.0",
+    "extensionizer": "1.0.1",
+    "i18next": "22.0.3",
+    "i18next-browser-languagedetector": "7.0.0",
+    "i18next-localstorage-cache": "1.1.1",
+    "lottie-web": "5.9.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-helmet": "6.1.0",
+    "react-i18next": "12.0.0",
+    "react-modal": "3.16.1",
+    "react-query": "3.39.2",
+    "react-redux": "8.0.4",
+    "react-router-dom": "6.4.2",
+    "react-switch": "7.0.0",
+    "react-tooltip": "4.4.3",
+    "redux-thunk": "2.4.1",
+    "trusted-types": "2.0.0",
+    "typescript": "4.8.4",
+    "web-vitals": "3.0.4"
+  },
+  "devDependencies": {
+    "@melloware/csp-webpack-plugin": "6.0.4",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "13.4.0",
+    "@testing-library/user-event": "14.4.3",
+    "@types/dateformat": "5.0.0",
+    "@types/react-helmet": "6.1.5",
+    "@types/react-modal": "3.13.1",
+    "customize-cra": "1.0.0",
+    "husky": "8.0.1",
+    "jest": "29.2.2",
+    "jest-canvas-mock": "2.4.0",
+    "react-app-rewired": "2.2.1",
+    "react-scripts": "5.0.1",
+    "tailwindcss": "3.2.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!dateformat)/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 10,
+        "functions": 5,
+        "lines": 10,
+        "statements": 10
+      }
+    },
+    "coverageReporters": [
+      "text"
+    ],
+    "moduleNameMapper": {
+      "/.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "/__mocks__/fileMock.ts",
+      "/.svg$": "/__mocks__/svg.ts"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test|unit).[jt]s?(x)"
+    ]
+  }
+}
