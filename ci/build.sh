@@ -30,18 +30,18 @@ npm run test || { [ "${ALLOW_FAILURES}" = "true" ] && true || false; }
 # If a release publish to cloudflare
 if [ "${IS_A_RELEASE}" = "true" ]; then
   if [ "${DEV_RELEASE}" = "false" ]; then
-    echo "" && echo "=== Release Generated: Publish to Cloudflare testnet-prod ===" && echo ""
-    { yes n || true; } | npm run deploy:testnet-prod
+    echo "" && echo "=== Release Generated: Publish to Cloudflare prod ===" && echo ""
+    { yes n || true; } | npm run deploy:prod
     echo "" && echo "=== Generating Release ${VERSION} for ${REPO_SLUG} ===" && echo ""
     curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token ${NPM_GITHUB_TOKEN}" https://api.github.com/repos/"${REPO_SLUG}"/releases -d "{\"tag_name\":\"${VERSION}\",\"generate_release_notes\":true}"
   else
-    echo "" && echo "=== Release Candidate generated: Publish to Cloudflare testnet ===" && echo ""
-    { yes n || true; } | npm run deploy:testnet
+    echo "" && echo "=== Release Candidate generated: Publish to Cloudflare staging ===" && echo ""
+    { yes n || true; } | npm run deploy:staging
   fi
 elif [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
   if [ "${TRAVIS_BRANCH}" = "${DEV_RELEASE_BRANCH}" ]; then
-    echo "" && echo "=== Merge into ${TRAVIS_BRANCH}: Publish to Cloudflare testnet ===" && echo ""
-    { yes n || true; } | npm run deploy:testnet
+    echo "" && echo "=== Merge into ${TRAVIS_BRANCH}: Publish to Cloudflare staging ===" && echo ""
+    { yes n || true; } | npm run deploy:staging
   fi
 fi
 
