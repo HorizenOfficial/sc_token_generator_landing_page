@@ -35,7 +35,7 @@ echo "Username: $USERNAME, HOME: $HOME, UID: $CURRENT_UID, GID: $CURRENT_GID"
 export DEBIAN_FRONTEND=noninteractive
 
 apt-get update
-apt-get -yq install gosu
+apt-get -yq install gosu jq
 
 # Fix ownership of everything in /build recursively
 chown -fR "$CURRENT_UID":"$CURRENT_GID" /build
@@ -45,5 +45,8 @@ if [ "$USERNAME" = "root" ]; then
 else
   exec gosu "$USERNAME" "$@"
 fi
+
+# Install wrangler latest version
+npm install -g wrangler
 
 
