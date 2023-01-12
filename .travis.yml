@@ -9,13 +9,13 @@ git:
 
 env:
   global:
-    - DOCKER_IMAGE_NAME=zencash/sc_token_generator_frontend
+    - DOCKER_IMAGE_NAME=zencash/sc_token_generator_landing_page
     - IMAGE_NAME=node
     - IMAGE_TAG=16-buster
     - PROD_RELEASE_BRANCH=master
     - DEV_RELEASE_BRANCH=development
-    - DEV_ENVIRONMENTS="TESTNET_DEV TESTNET_DEV_BANNER MAINNET_DEV MAINNET_DEV_BANNER"
-    - PROD_ENVIRONMENTS="TESTNET_PROD TESTNET_PROD_BANNER MAINNET_PROD MAINNET_PROD_BANNER"
+    - DEV_ENVIRONMENTS="STAGING"
+    - PROD_ENVIRONMENTS="PROD"
 
 script: 
   - source ci/setup_env.sh
@@ -23,4 +23,4 @@ script:
 
 jobs:
   include:
-    - name: tokenchain_generator_frontend_builder
+    - name: tokenchain_generator_landing_builder
