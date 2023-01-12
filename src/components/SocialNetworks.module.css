@@ -1,0 +1,3 @@
+.path:hover path.fill {
+    fill: url(#gradient);
+}

@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --links-color: #0e9de5;
+    background: #0C0C1C;
+}
+
+a {
+    color: var(--links-color);
+}
+
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: local('Proxima-Nova'), url(../src/assets/fonts/Proxima_Nova/proxima-nova-normal.otf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: local('Proxima-Nova-Semibold'), url(../src/assets/fonts/Proxima_Nova/proxima-nova-semibold.otf) format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: local('Proxima-Nova-Bold'), url(../src/assets/fonts/Proxima_Nova/proxima-nova-bold.otf) format('truetype');
+    font-weight: 700;
+}
+
+body, p, button, input, a {
+    font-family: "Proxima-Nova", serif !important;
+    font-variant: no-common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button > .__react_component_tooltip {
+    font-size: 20px;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 14px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #7A7E8C;
+    border-radius: 30px;
+    border-right: 6px solid #041742;
+    border-top: 4px solid #041742;
+    border-bottom: 4px solid #041742;
+  }
+
+.routerNavLink.active {
+    color: #C8CFD4 !important;
+}
+
+.routerNavLink.active:hover {
+    color: white !important;
+}
+
+.routerNavLink:hover:not(.active) {
+    color: white !important;
+}
+
+.routerNavLink.active {
+    color: white;
+}
+
+.routerNavLink {
+    color: #7A7E8C;
+}
+
+/*
+.pagination-arrow:hover {
+    content: url(./assets/white_arrow_left.png)
+}
+
+.copy-icon:hover {
+    content: url(./assets/copy_icon_white.png)
+}
+*/
+
+.pagination-button:hover {
+    background-color: #041742;
+    color: white;
+}
+
+.menu-option:hover {
+    background: linear-gradient(104deg, #051331 36.37%, rgba(38, 219, 141, 0.8) 157.17%);
+}
+
+#tokenmint_link_menu,
+#filters_menu {
+    display: none;
+}
+
+.tokenmint_link:hover~#tokenmint_link_menu,
+#tokenmint_link_menu:hover,
+.filters_menu_button:hover > #filters_menu,
+#filters_menu:hover {
+    display: block;
+}
+
+#filter_arrow {
+    transform: rotate(180deg);
+}
+
+.filters_menu_button:hover > #filter_arrow,
+#filters_menu:hover~#filter_arrow,
+#filter_arrow.open {
+    transform: rotate(0deg) !important;
+}
+
+/* Overwrite react-switch handle style */
+.inactive > .react-switch-handle {
+    left: 0px !important;
+}
+.react-switch-handle {
+    height: 16px !important;
+    width: 16px !important;
+    top: 6px !important;
+    left: 10px !important;
+}
+
+.list_container:hover > .list_element::after {
+    content: "";
+    position: absolute;
+    width: 0.5rem;
+    height: 100%;
+    border-width: 1px;
+    top: 0;
+    border-color: #26DB8D;
+}
+
+.list_container:hover > .element_right::after {
+    content: "";
+    right: 0;
+    border-left: 0;
+}
+
+.list_container:hover > .element_left::after {
+    content: "";
+    left: 0;
+    border-right: 0;
+}
+
+/* SLIDER */
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+        border-radius: 8px;
+        height: 8px;
+        outline: none;
+        -webkit-appearance: none;
+    }
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid 4px #26DB8D;
+    background: white;
+    cursor: ew-resize;
+  }
+
+  body::-webkit-scrollbar {
+      display: none;
+  }
+
+  select {
+    appearance: none;
+    background: url("assets/arrow_collapse_down.png") no-repeat 4.7em;
+    background-size: 20px;
+  }
+
+  .blur-one-pager {
+    filter: blur(350px);
+  }
+
+  .blur-layout {
+    filter: blur(150px);
+}
+
+.blur-sm {
+    filter: blur(4px) !important;
+}
+
+.ReactModal__Overlay {
+    background: transparent !important;
+}

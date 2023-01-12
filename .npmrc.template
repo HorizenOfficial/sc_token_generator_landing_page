@@ -1,0 +1,3 @@
+//npm.pkg.github.com/:_authToken=${NPM_GITHUB_TOKEN}
+@horizenlabs:registry=https://npm.pkg.github.com
+@horizenofficial:registry=https://npm.pkg.github.com
