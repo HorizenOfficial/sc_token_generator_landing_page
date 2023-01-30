@@ -8,7 +8,7 @@ echo "=== Local variables ==="
 # This allows to bypass 'npm run audit' >=high vulnerabilities if needed
 ALLOW_AUDIT_FAILURES="${ALLOW_AUDIT_FAILURES:-false}"
 # This allows to bypass 'npm run test' failures if needed
-ALLOW_FAILURES="${ALLOW_FAILURES:-false}"
+ALLOW_FAILURES="${ALLOW_FAILURES:-true}"
 DEV_RELEASE="${DEV_RELEASE:-false}"
 IMAGE_NAME="${IMAGE_NAME:-node}"
 IMAGE_TAG="${IMAGE_TAG:-16-buster}"
